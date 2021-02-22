@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function handleDateChange(value) {
+        console.log(value);
+      }
+    </script>
+  </head>
+
+  <body>
+    <form style="background-color: rgb(16, 114, 194); text-align: center">
+      <fieldset>
+        <legend>Registration Form</legend>
+        <div>
+          <label>First Name</label>
+          <input type="text" placeholder="enter first name" />
+        </div>
+        <div>
+          <label>Second Name</label>
+          <input type="text" placeholder="enter second name" />
+        </div>
+        <div>
+          <label>Mobile number</label>
+          <input type="number" />
+        </div>
+
+        <div>
+          <label>Password</label>
+          <input type="password" />
+        </div>
+        <div>
+          <label>Date Of Birth</label>
+          <input type="date" onchange="handleDateChange(this.value)" />
+        </div>
+        <label>Age</label>
+        <input type="number" min="0" max="100" />
+        <div>
+          <label>Gender</label>
+          <label>Male <input type="radio" name="gender" /> </label>
+          <label>Female <input type="radio" name="gender" /> </label>
+        </div>
+        <div>
+          <label>Favoraite dish</label>
+          <label>Biryani</label>
+          <input type="checkbox" />
+          <label>Rajma</label>
+          <input type="checkbox" />
+          <label>Mutton</label>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <label> Location </label>
+          <select>
+            <option value="hyderabad">Hyd</option>
+            <option value="pune">pune</option>
+            <option value="bangalore">ban</option>
+          </select>
+        </div>
+        <div>
+          <label>Fav Food</label>
+          <input list="Receipes" name="Receipes" />
+          <datalist id="Receipes">
+            <option value="Chicken biryani"></option>
+            <option value="Mutton biryani"></option>
+            <option value="Gulab jamun"></option>
+            <option value="veg biryani"></option>
+            <option value="paratha"></option>
+          </datalist>
+        </div>
+        <div>
+          <label>Feedback</label>
+          <textarea></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Sign Up" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
